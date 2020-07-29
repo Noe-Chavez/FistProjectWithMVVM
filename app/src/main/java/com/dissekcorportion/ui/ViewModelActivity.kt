@@ -65,5 +65,3 @@ class ViewModelActivity : AppCompatActivity() {
     }
 
 }
-// Repo
-// https://github.com/albertoandroid/ViewModeLiveDataKotlin/blob/master/app/src/main/java/com/androiddesdecero/viewmodellivedatakotlin/ui/ViewModelActivity.kt
