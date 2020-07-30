@@ -11,7 +11,7 @@ class LiveDataViewModel : ViewModel() {
     var userListLiveData: MutableLiveData<List<User>> = MutableLiveData() // observable
     var userList: MutableList<User> = ArrayList()
 
-    // Una laveData asecas no se puede agregar elementos.
+    // Una liveData asecas no se puede agregar elementos.
     fun getUserList(): LiveData<List<User>> {
         return userListLiveData
     }

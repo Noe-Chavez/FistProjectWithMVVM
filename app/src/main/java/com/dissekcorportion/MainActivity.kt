@@ -3,6 +3,7 @@ package com.dissekcorportion
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.dissekcorportion.ui.DataBindingActivity
 import com.dissekcorportion.ui.LiveDataActivity
 import com.dissekcorportion.ui.UserViewModelActivity
 import com.dissekcorportion.ui.ViewModelActivity
@@ -26,6 +27,10 @@ class MainActivity : AppCompatActivity() {
 
         btLiveData.setOnClickListener {
             startActivity(Intent(applicationContext, LiveDataActivity::class.java))
+        }
+
+        btDataBinding.setOnClickListener {
+            startActivity(Intent(applicationContext, DataBindingActivity::class.java))
         }
     }
 }
