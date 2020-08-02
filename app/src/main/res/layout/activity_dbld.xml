@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewModelVariableXml"
+            type="com.dissekcorportion.viewmodel.DBLDViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".ui.DBLDActivity">
+        <TextView
+            android:text="@{viewModelVariableXml.user.nombre}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:visible="@{viewModelVariableXml.visible}"/>
+        <!-- visible se define en el objeto bindingAdapter -->
+
+        <TextView
+            android:text="@{viewModelVariableXml.user.edad}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:visible="@{viewModelVariableXml.visible}" />
+
+        <Button
+            android:onClick="@{()->viewModelVariableXml.updateUser()}"
+            android:text="Actualizar User"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:text="Visibilidad"
+            android:onClick="@{()->viewModelVariableXml.changeVisibility()}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</layout>

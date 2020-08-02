@@ -3,10 +3,7 @@ package com.dissekcorportion
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.dissekcorportion.ui.DataBindingActivity
-import com.dissekcorportion.ui.LiveDataActivity
-import com.dissekcorportion.ui.UserViewModelActivity
-import com.dissekcorportion.ui.ViewModelActivity
+import com.dissekcorportion.ui.*
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -31,6 +28,10 @@ class MainActivity : AppCompatActivity() {
 
         btDataBinding.setOnClickListener {
             startActivity(Intent(applicationContext, DataBindingActivity::class.java))
+        }
+
+        btDBLABinding.setOnClickListener {
+            startActivity(Intent(applicationContext, DBLDActivity::class.java))
         }
     }
 }
