@@ -19,6 +19,7 @@ class DBLDActivity : AppCompatActivity() {
 
         val binding: ActivityDbldBinding = DataBindingUtil.setContentView(this@DBLDActivity, R.layout.activity_dbld)
 
+        // se asocia con el ciclo de vida de este activity.
         binding.lifecycleOwner = this
 
         viewModel = ViewModelProviders.of(this).get(DBLDViewModel::class.java)

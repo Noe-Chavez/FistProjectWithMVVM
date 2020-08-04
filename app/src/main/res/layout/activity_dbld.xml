@@ -18,14 +18,16 @@
             android:text="@{viewModelVariableXml.user.nombre}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:visible="@{viewModelVariableXml.visible}"/>
+            app:visibility="@{viewModelVariableXml.visible}"
+            app:size="@{viewModelVariableXml.size}"/>
         <!-- visible se define en el objeto bindingAdapter -->
 
         <TextView
             android:text="@{viewModelVariableXml.user.edad}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:visible="@{viewModelVariableXml.visible}" />
+            app:visibility="@{viewModelVariableXml.visible}"
+            app:size="@{viewModelVariableXml.size}" />
 
         <Button
             android:onClick="@{()->viewModelVariableXml.updateUser()}"
